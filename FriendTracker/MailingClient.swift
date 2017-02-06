@@ -51,7 +51,7 @@ class MailParams {
         smtpSession.connectionLogger = {(connectionID, type, data) in
             if data != nil {
                 if let string = NSString(data: data!, encoding: String.Encoding.utf8.rawValue){
-                    NSLog("Connectionlogger: \(string)")
+                    //NSLog("Connectionlogger: \(string)")
                 }
             }
         }

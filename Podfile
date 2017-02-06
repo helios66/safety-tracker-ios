@@ -12,6 +12,7 @@ target 'FriendTracker' do
   pod 'GoogleMaps'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Crash'
   pod 'Alamofire'
   pod 'APScheduledLocationManager'
   pod 'mailcore2-ios'
