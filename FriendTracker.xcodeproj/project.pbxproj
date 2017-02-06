@@ -230,16 +230,16 @@
 		};
 		2E44742B1E48C3E400A7035E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Replace this with the GOOGLE_APP_ID from your GoogleService-Info.plist file\n1:529868317250:ios:ac4b485816bf036e\n\n# Replace the /Path/To/ServiceAccount.json with the path to the key you just downloaded\n\"${PODS_ROOT}\"/FirebaseCrash/upload-sym \"/Users/fdamilola/Documents/IOSkeyChain/ss.json\"";
+			shellScript = "# Replace this with the GOOGLE_APP_ID from your GoogleService-Info.plist file\nGOOGLE_APP_ID=1:529868317250:ios:ac4b485816bf036e\n\n\"${PODS_ROOT}\"/FirebaseCrash/upload-sym \"/Users/fdamilola/Documents/IOSkeyChain/ss.json\"";
 		};
 		2F061D4205D0B4D8F1E8D7E7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

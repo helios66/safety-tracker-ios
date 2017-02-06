@@ -48,13 +48,13 @@ class MailParams {
         
         smtpSession.authType = MCOAuthType.saslPlain
         smtpSession.connectionType = MCOConnectionType.TLS
-        smtpSession.connectionLogger = {(connectionID, type, data) in
-            if data != nil {
-                if let string = NSString(data: data!, encoding: String.Encoding.utf8.rawValue){
-                    //NSLog("Connectionlogger: \(string)")
-                }
-            }
-        }
+//        smtpSession.connectionLogger = {(connectionID, type, data) in
+//            if data != nil {
+//                if NSString(data: data!, encoding: String.Encoding.utf8.rawValue) != nil{
+//                    //NSLog("Connectionlogger: \(string)")
+//                }
+//            }
+//        }
         
         let builder = MCOMessageBuilder()
         builder.header.to = [email];
