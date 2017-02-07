@@ -49,13 +49,15 @@ class HaltTrackingViewController: UIViewController {
                     if(self.appDelegate.manager != nil){
                         if(self.appDelegate.manager?.isRunning)!{
                             self.appDelegate.manager?.stoptUpdatingLocation()
-                            sender.setTitle("PURGED!", for: .normal)
-                            sender.isEnabled = false;
-                            sender.setTitle("PURGED!", for: .disabled)
-                            self.labelStatus.text = "STATUS: PURGED!";
-                            self.buttonStopResume.setTitle("START NEW SESSION", for: .normal)
                         }
                     }
+                    
+                    sender.setTitle("PURGED!", for: .normal)
+                    sender.isEnabled = false;
+                    sender.setTitle("PURGED!", for: .disabled)
+                    self.labelStatus.text = "STATUS: PURGED!";
+                    self.buttonStopResume.setTitle("START NEW SESSION", for: .normal)
+                    
                     if(trackSession != nil){
                         self.appDelegate.ref.child((trackSession?.user_email.normalize())!).child(Keys.LOCATION).setValue(nil);
                         self.appDelegate.ref.child((trackSession?.user_email.normalize())!).child(Keys.TRACKING_STATUS).setValue(false)
