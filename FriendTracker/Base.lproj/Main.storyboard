@@ -41,7 +41,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">Safety Tracker v0.1
+                                        <string key="content">Zatcho!
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,7 +52,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Safety tracker is a non-intrusive solution for keeping track of your movement using your phone, should you decide take a step outside for a couple of hours or visit the mall. 
+                                        <mutableString key="content">Zatcho! is a non-intrusive solution for keeping track of your movement using your phone, should you decide take a step outside for a couple of hours or visit the mall. 
 
 It is a solution born out of necessity, if you are familiar with the current state of things in Nigeria.
 
@@ -479,6 +479,6 @@ You can enter up to 3 email addresses of people who will have access to your loc
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="xMh-4D-qmi"/>
-        <segue reference="bdH-r9-8VG"/>
+        <segue reference="xP0-Ii-Su2"/>
     </inferredMetricsTieBreakers>
 </document>

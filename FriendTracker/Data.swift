@@ -21,4 +21,5 @@ class TrackSession: EVObject {
 class Coordinates: EVObject {
     var longitude: String! = "";
     var latitude: String! = "";
+    var time: Date! = Date();
 }

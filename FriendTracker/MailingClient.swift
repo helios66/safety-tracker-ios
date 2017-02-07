@@ -21,11 +21,11 @@ class MailParams {
     }
     
     func sendEmailQuietly(emails: [String], passkey: String!, sender: String!){
-        let message = "<b>Yo Ajala The Traveler</b> <p> Visit <a href='http://safety-tracker.elta.com.ng/'> Safety Tracker <a>  and enter this passkey: <p><b>\((passkey)!)</b><p> along with your email address(which ever you received this email with) and your friend/family/archenemy('s) email address \((emails)) to get an overview of your movement pattern.<p><b>Have a nice life!! </b> If you have issues send a mail to safetytracker10@gmail.com."
+        let message = "<b>Yo Ajala The Traveler</b> <p> Visit <a href='http://safety-tracker.elta.com.ng/'> Zatcho! <a>  and enter this passkey: <p><b>\((passkey)!)</b><p> along with your email address(which ever you received this email with) and your friend/family/archenemy('s) email address \((emails)) to get an overview of your movement pattern.<p><b>Have a nice life!! </b> If you have issues send a mail to safetytracker10@gmail.com."
         self.mailSender(email: MCOAddress(displayName: "Dear User", mailbox: sender), message: message)
         
         for e in emails{
-            let message = "<b>Yo \(e)!<b> <p> This is terrible text formatting but \((sender)!) has requested that you be able to gain access to <i>his/her/it/ze location history</i> if he/she/it/ze gets missing or something.<p> Don't be a stalker. Visit <a href='http://safety-tracker.elta.com.ng/'> Safety Tracker <a>  and enter this passkey: <p><b>\((passkey)!)</b><p> along with your email address(which ever you received this email with) and your friend/family/archenemy('s) email address, also in this message.<p><b>Have a nice life!! </b> If you have issues send a mail to safetytracker10@gmail.com."
+            let message = "<b>Yo \(e)!<b> <p> This is terrible text formatting but \((sender)!) has requested that you be able to gain access to <i>his/her/it/ze location history</i> if he/she/it/ze gets missing or something.<p> Don't be a stalker. Visit <a href='http://safety-tracker.elta.com.ng/'> Zatcho! <a>  and enter this passkey: <p><b>\((passkey)!)</b><p> along with your email address(which ever you received this email with) and your friend/family/archenemy('s) email address, also in this message.<p><b>Have a nice life!! </b> If you have issues send a mail to safetytracker10@gmail.com."
             self.mailSender(email: MCOAddress(displayName: "Dear User", mailbox: e), message: message);
         }
         
@@ -63,7 +63,7 @@ class MailParams {
             builder.header.bcc = [MCOAddress(displayName: sender, mailbox: smtpSession.username)]
             self.count+=1;
         }
-        builder.header.subject = "Safety Tracker Notice"
+        builder.header.subject = "Zatcho! Notice"
         builder.htmlBody = message
         
         let rfc822Data = builder.data()

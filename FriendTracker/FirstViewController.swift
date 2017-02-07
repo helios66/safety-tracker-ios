@@ -46,7 +46,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         if(switchAgree.isOn){
                 manager.requestAlwaysAuthorization()
         }else{
-            self.createAlertDialog("🙄", message: "You have to agree with the rubbish above to use the app. :)");
+            self.createAlertDialog("Hi", message: "You have to agree with the rubbish above to use the app. :)");
         }
     }
     

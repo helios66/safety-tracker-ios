@@ -6,10 +6,10 @@
 //  Copyright © 2017 CottaCush. All rights reserved.
 //
 
-import UIKit
 import Firebase
 import APScheduledLocationManager
 import CoreLocation
+import CoreMotion
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     public var manager: APScheduledLocationManager? = nil
     public var counter: Int = 0;
     public var ref: FIRDatabaseReference!;
+    
+//    var motionManager: CMMotionManager!
+//    var histeresisExcited: Bool = false
+//    var lastAcceleration: CMAcceleration!
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -50,11 +55,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+//    func acceleratotShaking(last: CMAcceleration, current: CMAcceleration, threshold: Double) -> Bool {
+//        let deltaX: Double = fabs(last.x - current.x)
+//        let deltaY: Double = fabs(last.y - current.y)
+//        let deltaZ: Double = fabs(last.z - current.z)
+//        return (deltaX > threshold && deltaY > threshold) || (deltaX > threshold && deltaZ > threshold) || (deltaY > threshold && deltaZ > threshold)
+//    }
+//    
+//    func applicationDidFinishLaunching(_ application: UIApplication) {
+//        motionManager = CMMotionManager()
+//        motionManager.startAccelerometerUpdates()
+//        motionManager.accelerometerUpdateInterval = 0.1
+//        motionManager.startAccelerometerUpdates(to: OperationQueue.main){
+//            (data, error) in
+//            if (self.lastAcceleration != nil) {
+//                if !self.histeresisExcited && self.acceleratotShaking(last: self.lastAcceleration, current: (data?.acceleration)!, threshold: 0.7) {
+//                    self.histeresisExcited = true
+//                    /* SHAKE DETECTED. DO HERE WHAT YOU WANT. */
+//                    LogMinx.logData(string: "Is chook me");
+//                    
+//                }
+//                else if self.histeresisExcited && !self.acceleratotShaking(last: self.lastAcceleration, current: (data?.acceleration)!, threshold: 0.2) {
+//                    self.histeresisExcited = false
+//                }
+//            }
+//            self.lastAcceleration = data?.acceleration
+//        }
+//    }
+//    
     
     func setManager(manager: APScheduledLocationManager) {
         self.manager = manager;
     }
-
+    
 
 }
 

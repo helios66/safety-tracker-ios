@@ -39,6 +39,7 @@
 		2E5520A91E45FEC0003D6C39 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2E5520AB1E460177003D6C39 /* LocalStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		2E5520AD1E4601B4003D6C39 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		2E9FB1D11E49544F005C0F08 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		2EDFDA491E4349E6008C1ECE /* FriendTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDFDA4C1E4349E6008C1ECE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EDFDA4E1E4349E6008C1ECE /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +67,7 @@
 		1770A53753DF38D1D92C2BD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E9FB1D11E49544F005C0F08 /* CoreMotion.framework */,
 				38788AC8D83B30820C0B0D6E /* Pods_FriendTracker.framework */,
 			);
 			name = Frameworks;

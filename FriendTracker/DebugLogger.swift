@@ -9,7 +9,7 @@
 import Foundation
 
 struct LogMinx {
-    static let state: Bool = false;
+    static let state: Bool = true;
     static func logData(string: String){
         if(state == true){
             debugPrint(string);

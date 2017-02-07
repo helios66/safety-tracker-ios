@@ -104,11 +104,11 @@ class SetupViewController: UIViewController, APScheduledLocationManagerDelegate 
                 LogMinx.logData(string: (trackSession?.toJsonString())!);
                 self.startTracking(yourEmail: self.trackSession?.user_email, tEmails: (self.trackSession?.trackers)!, passKey: (self.trackSession?.random_key)!);
             }else{
-                self.createAlertDialog("🙄", message:"You need to enter at least one valid notifiable email address");
+                self.createAlertDialog("Hello!", message:"You need to enter at least one valid notifiable email address");
             }
 
         }else{
-            self.createAlertDialog("🙄", message:"You need a valid email address to proceed");
+            self.createAlertDialog("Hello!", message:"You need a valid email address to proceed");
         }
         
     }
@@ -119,9 +119,10 @@ class SetupViewController: UIViewController, APScheduledLocationManagerDelegate 
                 self.setAuthedEmails(email: yourEmail, emails: tEmails);
                 MailParams.getInstance().sendEmailQuietly(emails: tEmails, passkey: passKey, sender: self.textFieldYourEmailAddress.text!)
                 self.appDelegate.ref.child((self.trackSession?.user_email.normalize())!).child(Keys.PASS_KEY).setValue(passKey)
+                self.appDelegate.ref.child((self.trackSession?.user_email.normalize())!).child(Keys.TRACKING_STATUS).setValue(true);
                 self.appDelegate.ref.child((self.trackSession?.user_email.normalize())!).child(Keys.LOCATION).setValue(nil)
                 self.appDelegate.counter = 0;
-                self.appDelegate.manager?.startUpdatingLocation(interval: 30, acceptableLocationAccuracy: 100)
+                self.appDelegate.manager?.startUpdatingLocation(interval: 20, acceptableLocationAccuracy: 50)
                 self.performSegue(identifier: Segue.segueInitTracking);
             }else{
                 self.appDelegate.manager?.requestAlwaysAuthorization()
@@ -162,5 +163,6 @@ class SetupViewController: UIViewController, APScheduledLocationManagerDelegate 
     
     func scheduledLocationManager(_ manager: APScheduledLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
     }
+
 
 }
